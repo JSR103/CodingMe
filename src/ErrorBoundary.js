@@ -1,0 +1,45 @@
+import React from "react";
+
+// https://reactjs.org/docs/error-boundaries.html
+// https://codepen.io/gaearon/pen/wqvxGa?editors=0010
+export default class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { error: null, errorInfo: null };
+  }
+  static getDerivedStateFromError(error) {
+    // Update state so the next render will show the fallback UI.
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    // Catch errors in any components below and re-render with error message
+    this.setState({
+      error: error,
+      errorInfo: errorInfo
+    });
+    // You can also log error messages to an error reporting service here
+    // logErrorToMyService(error, errorInfo);
+  }
+
+  render() {
+    if (this.state.errorInfo) {
+      // Error path
+      return (
+        <div>
+          <h2>Something went wrong.</h2>
+          <details style={{ whiteSpace: "pre-wrap" }}>
+            {this.state.error && this.state.error.toString()}
+            <br />
+            {this.state.errorInfo.componentStack}
+          </details>
+        </div>
+      );
+    }
+    // Normally, just render children
+    if (this.props.children) {
+      return this.props.children;
+    } else {
+      return null;
+    }
+  }
+}

@@ -1,13 +1,16 @@
 import React from "react";
-import "./styles.css";
+import "./styles.scss";
 import Navigation from "./components/Nav/Navigation";
 import Main from "./components/Routes/Main";
+import ErrorBoundary from "./ErrorBoundary";
 
 const App = () => (
-  <div className="app">
-    <Navigation />
-    <Main />
-  </div>
+  <ErrorBoundary>
+    <div className="App">
+      <Navigation />
+      <Main />
+    </div>
+  </ErrorBoundary>
 );
 
 export default App;
