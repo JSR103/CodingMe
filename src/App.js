@@ -5,7 +5,6 @@ import Main from "./components/Routes/Main";
 
 const App = () => (
   <div className="app">
-    <h1>React Router Demo</h1>
     <Navigation />
     <Main />
   </div>
