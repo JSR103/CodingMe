@@ -11,89 +11,26 @@ body {
 .Nav {
   margin: 100px 75px 25px 75px;
 }
-.Table {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 50px;
-}
 
-.Table li {
-  list-style: none;
-}
+h1 {
+  color: white;
+  background-color: black;
+  font-size: 3.5em;
+  font-weight: 900;
+  margin: 0 0 2em;
+  position: fixed;
+  top: 0px;
+  left: 0px;
 
-.Table li a {
-  width: 80px;
-  height: 80px;
-  background-color: #fff;
-  text-align: center;
-  line-height: 80px;
-  font-size: 35px;
-  margin: 0 10px;
-  display: block;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  border: 3px solid #fff;
-  z-index: 1;
-}
-
-.Table li a .icon {
-  position: relative;
-  color: #262626;
-  transition: 0.5s;
-  z-index: 3;
-}
-
-.Table li a:hover i {
-  color: #fff;
-  -webkit-transform: rotateY(360deg);
-  -moz-transform: rotateY(360deg);
-  -ms-transform: rotateY(360deg);
-  -o-transform: rotateY(360deg);
-  transform: rotateY(360deg);
-}
-
-.Table li a:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background: #f00;
-  transition: 0.5s;
-  z-index: 2;
+  @media only screen and (min-width: 600px) {
+    font-size: 5em;
+  }
 }
 
-.Table li a:hover:before {
-  top: 0;
-}
 
-.Table li:nth-child(1) a:before {
-  background: #6f42c1;
-}
-
-.Table li:nth-child(2) a:before {
-  background: #55acee;
-}
-
-.Table li:nth-child(3) a:before {
-  background: #0077b5;
-}
-
-.Table li:nth-child(4) a:before {
-  background: #dd4b39;
-}
-
-.buttons {
-  height: 100%;
-  text-align: center;
-  width: 100%;
-}
-.container {
+// Start Nav style
+/* .container {
   align-items: center;
   justify-content: center;
   padding: 1em;
@@ -104,38 +41,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
-}
-
-h1 {
-  color: white;
-  font-size: 1.25em;
-  font-weight: 900;
-  margin: 0 0 2em;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-
-  width: 100%;
-}
-@media (min-width: 450px) {
-  h1 {
-    font-size: 1.75em;
-  }
-}
-
-@media (min-width: 760px) {
-  h1 {
-    font-size: 3.25em;
-  }
-}
-
-@media (min-width: 900px) {
-  h1 {
-    font-size: 5.25em;
-    margin: 0 0 1em;
-  }
-}
-
+} */
 .btn {
   color: #fff;
   cursor: pointer;
@@ -161,17 +67,15 @@ h1 {
   }
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .btn {
     margin: 0 1em 2em;
   }
 }
-
+ */
 .btn-1 {
   font-weight: 100;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
+  display: inline-block;
 }
 .btn-1 svg {
   height: 45px;
@@ -200,6 +104,8 @@ h1 {
   stroke-dashoffset: 48;
   transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 }
+// Stop Nav buttons
+
 /* This is for the home - Welcome! glitch effect */
 .glitch {
   margin: 0;
@@ -262,6 +168,7 @@ h1 {
   }
 }
 /* Stop glitch effect */
+/* Start Calculator KeyPad*/
 .key {
   background-color: #f07c00;
   padding: 20px;
@@ -276,6 +183,8 @@ h1 {
   background-color: #003399;
   border: 2px solid #003399;
 }
+/* Stop Calculator KeyPad*/
+/* Start on ToDoList*/
 .todoListMain .header input {
   padding: 10px;
   font-size: 16px;
@@ -303,6 +212,12 @@ h1 {
   @media only screen and (max-width: 1000px) {
     padding-left: 295px;
   }
+  @media only screen and (max-width: 600px) {
+      padding-left: 115px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding-left: 55px;
+}
 }
 .todoListMain .theList li {
   color: rgb(0, 0, 0);
@@ -320,6 +235,7 @@ h1 {
 ul .theList {
   padding: 0px;
 }
+/*Stop ToDoList*/
 .Footer {
   position: absolute;
   left: 0;
@@ -327,3 +243,210 @@ ul .theList {
   right: 0;
   width: 100%;
 }
+/*Start of Footer Icons*/
+.Table {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+}
+
+.Table li {
+  list-style: none;
+}
+
+.Table li a {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+@media only screen and (max-width: 600px) {
+  .Table li a {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+  }
+  .Table{
+    left: 45%;
+  }
+}
+.Table li a .icon {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.Table li a:hover i {
+  color: #fff;
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+.Table li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.Table li a:hover:before {
+  top: 0;
+}
+
+.Table li:nth-child(1) a:before {
+  background: #6f42c1;
+}
+
+.Table li:nth-child(2) a:before {
+  background: #55acee;
+}
+
+.Table li:nth-child(3) a:before {
+  background: #0077b5;
+}
+
+.Table li:nth-child(4) a:before {
+  background: #dd4b39;
+}
+/*Stop Footer Icons*/
+/*Start Chart css*/
+//---Chart
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.coindesk {
+  font-weight: 300;
+}
+
+.coindesk a {
+  text-decoration: none;
+  color: #f07c00;
+}
+
+.popup {
+  min-height: 50px;
+}
+//---Line css
+.linechart {
+  padding: 8px;
+}
+.linechart_path {
+  stroke-width: 3;
+  fill: none;
+  stroke: #f07c00;
+
+}
+
+.linechart_axis {
+  stroke: #fff;
+}
+
+.linechart_point {
+  fill: #fff;
+  stroke-width: 2;
+}
+
+.linechart_area {
+  padding: 8px;
+  fill: transparent;
+  stroke: none;
+  opacity: .4;
+}
+
+.linechart_label {
+ fill: #fff;
+ font-weight: 700;
+}
+
+.hoverLine {
+  stroke: #f07c00;
+  stroke-width: 1;
+}
+//---Tools css
+.hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: white;
+  color: #f07c00;
+}
+
+.hover .price {
+  font-weight: 700;
+}
+//---InfoArea
+.data-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.heading {
+  font-size: 2.5em;
+  color:#fff;
+}
+
+.subtext {
+  color: #fff;
+}
+
+.box.left {
+  margin-right: 25px;
+}
+
+.box.middle {
+  padding: 0 25px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.box.right {
+  margin-left: 25px;
+}
+/*Stop Chart css*/
