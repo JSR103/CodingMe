@@ -8,7 +8,6 @@ import Footer from "./components/Footer/Footer";
 const App = () => (
   <ErrorBoundary>
     <div className="App">
-      <h1 className="glitch">WELCOME!</h1>
       <Navigation />
       <Main />
       <Footer />
