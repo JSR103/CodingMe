@@ -4,14 +4,14 @@ export default class TaskItem extends Component {
   constructor(props) {
     super(props);
 
-    this.createTasks = this.createTasks.bind(this);
+    this.createItem = this.createItem.bind(this);
   }
 
   delete(key) {
     this.props.delete(key);
   }
 
-  createTasks(item) {
+  createItem(item) {
     return (
       <li onClick={() => this.delete(item.key)} key={item.key}>
         {item.text}
@@ -21,7 +21,7 @@ export default class TaskItem extends Component {
 
   render() {
     var todoEntries = this.props.entries;
-    var listItems = todoEntries.map(this.createTasks);
+    var listItems = todoEntries.map(this.createItem);
 
     return <ul className="theList">{listItems}</ul>;
   }
